@@ -83,6 +83,11 @@ class _OrderPageState extends State<OrderPage> {
                     MaterialPageRoute(
                       builder: 
                         (context) => DetailOrderPage(
+                          jumlahMakanan: jumlahMakananController.text,
+                          jumlahMinuman: jumlahMinumanController.text,
+                          makanan: makananController.text,
+                          minuman: minumanController.text,
+                          totalHarga: totalHarga,
                         ),
                     )
                   );
