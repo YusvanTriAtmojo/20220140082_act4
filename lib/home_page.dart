@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:navigation_route/order_page.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -18,6 +19,12 @@ class _HomePageState extends State<HomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text('Selamat datang di Home Page!'),
+            ElevatedButton(onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const OrderPage()),
+              );
+            }, child: Text('Order Now'))
           ],
         ),
       ),
