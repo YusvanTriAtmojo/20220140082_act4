@@ -1,13 +1,8 @@
 import 'package:flutter/material.dart';
 
-class DetailOrderPage extends StatefulWidget {
+class DetailOrderPage extends StatelessWidget {
   const DetailOrderPage({super.key});
 
-  @override
-  State<DetailOrderPage> createState() => _DetailOrderPageState();
-}
-
-class _DetailOrderPageState extends State<DetailOrderPage> {
   @override
   Widget build(BuildContext context) {
     return const Placeholder();
