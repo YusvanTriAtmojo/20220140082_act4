@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:navigation_route/detailOrder_page.dart';
 
 class OrderPage extends StatefulWidget {
   const OrderPage({super.key});
@@ -73,6 +74,20 @@ class _OrderPageState extends State<OrderPage> {
                 return null;
               },
             ),
+            ElevatedButton(
+              onPressed: () {
+                if (_formKey.currentState!.validate()) {
+                  calculateTotalPrice();
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: 
+                        (context) => DetailOrderPage(
+                        ),
+                    )
+                  );
+                }
+              }, child: Text('Order Now'))
           ],
         )),
     );
